@@ -1,4 +1,6 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Tray, nativeImage } = require('electron');
+
+const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -8,7 +10,7 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    icon: 'icon-128x128.png',
+    icon: path.join(__dirname, '/icons/64x64.png'),
     backgroundColor: '#222222',
     width: 1200,
     height: 800,
@@ -17,6 +19,11 @@ const createWindow = () => {
     show: false
   });
 
+
+  const tray = new Tray(nativeImage.createEmpty())
+  tray.setImage(nativeImage.createFromPath(path.join(__dirname, '/icons/64x64.png')));
+
+  mainWindow.setTitle("Tatry.hu")
   mainWindow.setMenuBarVisibility(false);
   mainWindow.loadURL('http://tatry.hu');
   mainWindow.maximize();
