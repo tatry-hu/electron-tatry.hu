@@ -1,18 +1,15 @@
-# electron.tatry.hu
-
 ##  Basic Electron App for the Tatry.hu Website
 
+### Prerequisites:
 
-### Prerequisites
-
-Install Electron:
+Install Electron
 
 ```sh
 npm install electron --save-dev
 ```
 
 
-Install Electron Packager:
+Install Electron Packager
 
 ```sh
 npm install electron-packager --save-dev
