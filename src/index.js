@@ -3,34 +3,36 @@ const { app, BrowserWindow, Tray, nativeImage } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) {
+  // eslint-disable-line global-require
   app.quit();
 }
 
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    icon: path.join(__dirname, '/icons/64x64.png'),
+    icon: path.join(__dirname, '/icons/icon-128.png'),
     backgroundColor: '#222222',
     width: 1200,
     height: 800,
     contextIsolation: true,
     fullscreen: false,
-    show: false
+    show: false,
   });
 
+  const tray = new Tray(nativeImage.createEmpty());
+  tray.setImage(
+    nativeImage.createFromPath(path.join(__dirname, '/icons/icon-128.png'))
+  );
 
-  const tray = new Tray(nativeImage.createEmpty())
-  tray.setImage(nativeImage.createFromPath(path.join(__dirname, '/icons/64x64.png')));
-
-  mainWindow.setTitle("Tatry.hu")
+  mainWindow.setTitle('Tatry.hu');
   mainWindow.setMenuBarVisibility(false);
-  mainWindow.loadURL('http://tatry.hu');
+  mainWindow.loadURL('https://tatry.hu');
   mainWindow.maximize();
   mainWindow.show();
 
   // Open the DevTools.
-//  mainWindow.webContents.openDevTools();
+  //  mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
