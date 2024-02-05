@@ -9,7 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\"",
+    "lint": "eslint \"src/**/*.js*\"",
     "build:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "build:win": "electron-packager . tatry.hu --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"The Tatras through my eyes\"",
     "build:linux": "electron-packager . tatry.hu --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/icon-128.png --prune=true --out=release-builds",
@@ -62,6 +62,8 @@
     "@electron-forge/maker-squirrel": "^6.4.2",
     "@electron-forge/maker-zip": "^6.4.2",
     "electron": "16.0.5",
-    "electron-packager": "^15.5.2"
+    "electron-packager": "^15.5.2",
+    "@types/eslint": "^8.56.2",
+    "eslint": "^8.56.0"
   }
 }
