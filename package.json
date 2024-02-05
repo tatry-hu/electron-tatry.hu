@@ -12,7 +12,11 @@
     "lint": "echo \"No linting configured\"",
     "build:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "build:win": "electron-packager . tatry.hu --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"The Tatras through my eyes\"",
-    "build:linux": "electron-packager . tatry.hu --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/icon-128.png --prune=true --out=release-builds"
+    "build:linux": "electron-packager . tatry.hu --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/icon-128.png --prune=true --out=release-builds",
+    "merge": "git checkout main && git merge development && git checkout development",
+    "push": "npm run merge && npm run push:all && npm run push:tags",
+    "push:all": "git push --all",
+    "push:tags": "git push --tags"
   },
   "keywords": [],
   "author": {
