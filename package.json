@@ -63,7 +63,7 @@
     "@electron-forge/maker-zip": "^7.3.0",
     "electron": "^29.1.4",
     "electron-packager": "^17.1.2",
-    "@types/eslint": "^8.56.5",
+    "@types/eslint": "^8.56.6",
     "eslint": "^8.57.0"
   }
 }
