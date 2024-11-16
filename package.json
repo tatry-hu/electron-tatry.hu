@@ -61,12 +61,12 @@
     "@electron-forge/maker-rpm": "^7.5.0",
     "@electron-forge/maker-squirrel": "^7.5.0",
     "@electron-forge/maker-zip": "^7.5.0",
-    "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.15.0",
     "@types/eslint": "^9.6.1",
-    "electron": "^31.7.4",
+    "electron": "^31.7.5",
     "electron-packager": "^17.1.2",
-    "eslint": "^9.14.0",
+    "eslint": "^9.15.0",
     "globals": "^15.12.0"
   }
 }
