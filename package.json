@@ -64,7 +64,7 @@
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
     "@types/eslint": "^9.6.1",
-    "electron": "^39.4.0",
+    "electron": "^39.5.1",
     "electron-packager": "^17.1.2",
     "eslint": "^9.39.2",
     "globals": "^17.3.0"
