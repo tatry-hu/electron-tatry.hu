@@ -67,6 +67,6 @@
     "electron": "^40.10.4",
     "electron-packager": "^17.1.2",
     "eslint": "^10.5.0",
-    "globals": "^17.6.0"
+    "globals": "^17.7.0"
   }
 }
